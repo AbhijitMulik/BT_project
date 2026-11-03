@@ -1,0 +1,22 @@
+{
+  "name": "patent-chain",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.cjs --network localhost",
+    "seed:local": "hardhat run scripts/seed.cjs --network localhost",
+    "server": "npm --prefix backend run start",
+    "client": "npm --prefix frontend run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "concurrently": "^9.0.0",
+    "hardhat": "^2.22.15"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
